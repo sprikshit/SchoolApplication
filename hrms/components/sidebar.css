@@ -1,0 +1,48 @@
+.side-panel {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.side-panel a {
+    color: #fff;
+}
+
+.card {
+    margin: 20px;
+}
+.subSlider{
+   opacity: 1;
+ color:grey;
+}
+.subSlider ul {
+    margin-left: 15px;
+    list-style: none;
+}
+.subSlider ul li a{
+    margin-left: 5px;
+    padding: 10px;
+    
+}
+.space{
+    padding:10px 1px !important;
+    margin-left:10px;
+}
+.spacer{
+    margin-left: 5px;
+}
+.form-select {
+    border: 2px solid #17a2b8;
+}
+.newbtn{
+    color:#17a2b8;
+}
+.btn-outline-primary {
+    color: #17a2b8;
+    border-color: #17a2b8;
+}
+.btn-outline-primary:hover {
+    background-color: #17a2b8;
+    color: white;
+}

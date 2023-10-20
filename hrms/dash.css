@@ -1,0 +1,44 @@
+.card {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 220px;
+}
+
+.card-1 {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.card-2 {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.card-3 {
+    background-color: #d0d0d0;
+    color: #333;
+}
+
+.btn {
+    background-color: #17A2B8;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: #128ba7;
+}
+
+.container {
+    background-color: #f7f7f7;
+}
+
+.card-title {
+    color: #17A2B8;
+}
+
+.card-text {
+    color: #555;
+}

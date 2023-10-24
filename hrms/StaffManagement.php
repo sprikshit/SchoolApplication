@@ -38,9 +38,9 @@
                 <div class="col-md-4">
                     <div class="card card-2">
                         <div class="card-body">
-                            <h5 class="card-title">Ececutive Staff</h5>
-                            <p class="card-text">View Ececutive Staff Management information.</p>
-                            <a href="./StaffManagement.php" class="btn">Go to Ececutive Staff Management</a>
+                            <h5 class="card-title">Executive Staff</h5>
+                            <p class="card-text">View Executive Staff Management information.</p>
+                            <a href="./StaffManagement.php" class="btn">Go to Executive Staff Management</a>
                         </div>
                     </div>
                 </div>

@@ -337,7 +337,7 @@
 
         </section>
         <div class="container">
-            <div class="row">
+            <div class="row mt-3">
                 <div class="col-md-8">
                     <div class="card mb-3">
                         <div class="card-header">Monthly Time Per Day Counts <span>(Per Day)</span>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Student List</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -7,11 +8,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">  
+    <link href="assets/css/style.css" rel="stylesheet">
     <style>
-    
-
-/* Table Styles */
+        /* Table Styles */
 
         /* Style the side panel */
         .side-panel {
@@ -29,40 +28,46 @@
         .card {
             margin: 20px;
         }
-        .subSlider{
-           opacity: 1;
-         color:grey;
+
+        .subSlider {
+            opacity: 1;
+            color: grey;
         }
+
         .subSlider ul {
             margin-left: 15px;
             list-style: none;
         }
-        .subSlider ul li a{
+
+        .subSlider ul li a {
             margin-left: 5px;
             padding: 10px;
-            
+
         }
-        .space{
-            padding:10px 1px !important;
-            margin-left:10px;
+
+        .space {
+            padding: 10px 1px !important;
+            margin-left: 10px;
         }
-        .spacer{
+
+        .spacer {
             margin-left: 5px;
         }
     </style>
 </head>
+
 <body>
-    
-<div class="wrapper">
+
+    <div class="wrapper">
         <!-- sidebar navigation component -->
-       
-      
-       <!-- sidebar navigation component -->
-       <nav id="sidebar" class="active">
+
+
+        <!-- sidebar navigation component -->
+        <nav id="sidebar" class="active">
             <div class="sidebar-header text-center">
                 <a class="navbar-brand" href="dashboard">
                     <h3 class="text-primary fw-bolder pt-2 mb-0">MaaBharti</h3>
-                </a> 
+                </a>
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>
@@ -75,23 +80,23 @@
                     <a href="./see_data.php"><i class="fas fa-align-center"></i>See Students</a>
                 </li>
                 <li>
-            <a class="space" id="visitorManagementLink"><i class="fas fa-user-circle space"></i>Visitor Management<i id="dropdownIcon" class="fas fa-chevron-down rotate-icon spacer"></i></a>
-        </li>
-        <div class="subSlider">
-            <ul id="visitorManagementSubMenu" style="display: none;">
-                <li>
-                    <a href="./dashbord.php">Visitor's Dashboard</a>
+                    <a class="space" id="visitorManagementLink"><i class="fas fa-user-circle space"></i>Visitor Management<i id="dropdownIcon" class="fas fa-chevron-down rotate-icon spacer"></i></a>
                 </li>
+                <div class="subSlider">
+                    <ul id="visitorManagementSubMenu" style="display: none;">
+                        <li>
+                            <a href="./dashbord.php">Visitor's Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="visitorslog.php">Visitor Log</a>
+                        </li>
+                        <li>
+                            <a href="addvisitor.php">Add Visitor</a>
+                        </li>
+                    </ul>
+                </div>
                 <li>
-                    <a href="visitorslog.php">Visitor Log</a>
-                </li>
-                <li>
-                    <a href="addvisitor.php">Add Visitor</a>
-                </li>
-            </ul>
-        </div>
-                <li>
-                 <a href="./hrms/hrmsdashboard.php"><i class="fas fa-align-center"></i>HRMS</a>
+                    <a href="./hrms/hrmsdashboard.php"><i class="fas fa-align-center"></i>HRMS</a>
                 </li>
         </nav>
         <!-- end of sidebar component -->
@@ -128,8 +133,8 @@
                     </ul>
                 </div>
             </nav>
-                 <!-- Main Content -->
-                 <div class="col-md-15" style="margin: 20px 50px 0;">
+            <!-- Main Content -->
+            <div class="col-md-15" style="margin: 20px 50px 0;">
                 <h2>Student List</h2>
                 <!-- Search Bar -->
                 <div class="form-group">
@@ -281,7 +286,7 @@
 
         // Attach event listeners
         document.getElementById("searchInput").addEventListener("input", performSearch);
-        document.getElementById("classSelect").addEventListener("change", function () {
+        document.getElementById("classSelect").addEventListener("change", function() {
             const selectedClass = this.value;
             fetchStudentsByClass(selectedClass);
         });
@@ -296,7 +301,7 @@
             });
 
         // Event delegation for expand buttons
-        document.getElementById("studentTable").addEventListener("click", function (event) {
+        document.getElementById("studentTable").addEventListener("click", function(event) {
             if (event.target && event.target.classList.contains("expand-button")) {
                 const button = event.target;
                 const studentDetails = document.querySelector(button.getAttribute("data-target"));
@@ -309,91 +314,90 @@
                 }
             }
         });
-
     </script>
     <script>
         // Function to edit a student
         // Function to toggle between editable and non-editable states
-    function toggleEdit(loginID) {
-    const nameField = document.getElementById(`name${loginID}`);
-    const ageField = document.getElementById(`age${loginID}`);
-    const sectionField = document.getElementById(`section${loginID}`);
-    const contactNumberField = document.getElementById(`contactNumber${loginID}`);
+        function toggleEdit(loginID) {
+            const nameField = document.getElementById(`name${loginID}`);
+            const ageField = document.getElementById(`age${loginID}`);
+            const sectionField = document.getElementById(`section${loginID}`);
+            const contactNumberField = document.getElementById(`contactNumber${loginID}`);
 
-    // Create input fields to edit the information
-    const nameInput = createInputField(nameField.textContent);
-    const ageInput = createInputField(ageField.textContent);
-    const sectionInput = createInputField(sectionField.textContent);
-    const contactNumberInput = createInputField(contactNumberField.textContent);
+            // Create input fields to edit the information
+            const nameInput = createInputField(nameField.textContent);
+            const ageInput = createInputField(ageField.textContent);
+            const sectionInput = createInputField(sectionField.textContent);
+            const contactNumberInput = createInputField(contactNumberField.textContent);
 
-    // Replace the text fields with input fields
-    replaceField(nameField, nameInput);
-    replaceField(ageField, ageInput);
-    replaceField(sectionField, sectionInput);
-    replaceField(contactNumberField, contactNumberInput);
+            // Replace the text fields with input fields
+            replaceField(nameField, nameInput);
+            replaceField(ageField, ageInput);
+            replaceField(sectionField, sectionInput);
+            replaceField(contactNumberField, contactNumberInput);
 
-    // Add a "Save" button to save the changes
-    const saveButton = createSaveButton(loginID);
-    const parentElement = nameField.parentElement;
-    parentElement.appendChild(saveButton);
-}
-
-// Function to create an input field for editing
-function createInputField(value) {
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.value = value;
-    return input;
-}
-
-// Function to replace a field with another element
-function replaceField(field, replacement) {
-    field.parentElement.replaceChild(replacement, field);
-}
-
-// Function to create a "Save" button
-function createSaveButton(loginID) {
-    const button = document.createElement('button');
-    button.textContent = 'Save';
-    button.addEventListener('click', function () {
-        saveStudentChanges(loginID);
-    });
-    return button;
-}
-
-// Function to save changes made to a student's information
-function saveStudentChanges(loginID) {
-    const editedName = document.getElementById(`name${loginID}`).value;
-    const editedAge = document.getElementById(`age${loginID}`).value;
-    const editedSection = document.getElementById(`section${loginID}`).value;
-    const editedContactNumber = document.getElementById(`contactNumber${loginID}`).value;
-
-    // Prepare the data to send in the request body
-    const requestData = {
-        name: editedName,
-        age: editedAge,
-        section: editedSection,
-        contactNumber: editedContactNumber
-    };
-
-    // Make an AJAX request to update the student's information on the server
-    $.ajax({
-        url: `https://schoolapi-3yo0.onrender.com/students/${loginID}`, // Replace with your API endpoint
-        method: 'PUT',
-        data: JSON.stringify(requestData),
-        contentType: 'application/json', // Set the content type to JSON
-        success: function (response) {
-            // Handle success, e.g., close the modal, update the table, etc.
-            // Refresh the student table after updating
-            fetchStudentsByClass(""); // You may need to pass the selected class
-        },
-        error: function (error) {
-            // Handle error
-            console.error('Error updating student: ', error);
-            // Display an error message to the user, if needed
+            // Add a "Save" button to save the changes
+            const saveButton = createSaveButton(loginID);
+            const parentElement = nameField.parentElement;
+            parentElement.appendChild(saveButton);
         }
-    });
-}
+
+        // Function to create an input field for editing
+        function createInputField(value) {
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.value = value;
+            return input;
+        }
+
+        // Function to replace a field with another element
+        function replaceField(field, replacement) {
+            field.parentElement.replaceChild(replacement, field);
+        }
+
+        // Function to create a "Save" button
+        function createSaveButton(loginID) {
+            const button = document.createElement('button');
+            button.textContent = 'Save';
+            button.addEventListener('click', function() {
+                saveStudentChanges(loginID);
+            });
+            return button;
+        }
+
+        // Function to save changes made to a student's information
+        function saveStudentChanges(loginID) {
+            const editedName = document.getElementById(`name${loginID}`).value;
+            const editedAge = document.getElementById(`age${loginID}`).value;
+            const editedSection = document.getElementById(`section${loginID}`).value;
+            const editedContactNumber = document.getElementById(`contactNumber${loginID}`).value;
+
+            // Prepare the data to send in the request body
+            const requestData = {
+                name: editedName,
+                age: editedAge,
+                section: editedSection,
+                contactNumber: editedContactNumber
+            };
+
+            // Make an AJAX request to update the student's information on the server
+            $.ajax({
+                url: `https://schoolapi-3yo0.onrender.com/students/${loginID}`, // Replace with your API endpoint
+                method: 'PUT',
+                data: JSON.stringify(requestData),
+                contentType: 'application/json', // Set the content type to JSON
+                success: function(response) {
+                    // Handle success, e.g., close the modal, update the table, etc.
+                    // Refresh the student table after updating
+                    fetchStudentsByClass(""); // You may need to pass the selected class
+                },
+                error: function(error) {
+                    // Handle error
+                    console.error('Error updating student: ', error);
+                    // Display an error message to the user, if needed
+                }
+            });
+        }
 
 
 
@@ -409,12 +413,12 @@ function saveStudentChanges(loginID) {
                     data: {
                         loginID: loginID
                     },
-                    success: function (response) {
+                    success: function(response) {
                         // Handle success, e.g., remove the student's row from the table
                         // You can use jQuery to remove the row by selecting it with the loginID
                         $(`#studentRow${loginID}`).remove();
                     },
-                    error: function (error) {
+                    error: function(error) {
                         // Handle error
                         console.error('Error deleting student: ', error);
                         // Display an error message to the user, if needed
@@ -424,4 +428,5 @@ function saveStudentChanges(loginID) {
         }
     </script>
 </body>
+
 </html>

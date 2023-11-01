@@ -86,7 +86,7 @@
             </ul>
         </div>
                 <li>
-                 <a href="../hrms/hrmsdashboard.php"><i class="fas fa-align-center"></i>HRMS</a>
+                 <a href="./hrms/hrmsdashboard.php"><i class="fas fa-align-center"></i>HRMS</a>
                 </li>
         </nav>
         <!-- end of sidebar component -->
@@ -151,7 +151,7 @@
                     <div class="card-body">
                         <h5 class="card-title">HRMS</h5>
                         <p class="card-text">Manage HRMS</p>
-                        <a href="hrmslogin.php" class="btn btn-info">Go to HRMS Management</a>
+                        <a href="/hrms/hrmsdashboard.php" class="btn btn-info">Go to HRMS Management</a>
                     </div>
                 </div>
             </div>

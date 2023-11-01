@@ -30,7 +30,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Teacher Staff</h5>
                             <p class="card-text">View Teachers Staff Management information.</p>
-                            <a href="./see_teachers.php" class="btn ">Go to Teacher Staff Management</a>
+                            <a href="./see_teachers.php" class="btn ">Go to Teachers Staff Management</a>
                         </div>
                     </div>
                 </div>

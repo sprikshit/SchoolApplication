@@ -26,8 +26,8 @@
                     <div class="card card-1">
                         <div class="card-body">
                             <h5 class="card-title">Vendor Management</h5>
-                            <p class="card-text">Add data to the system.</p>
-                            <a href="./" class="btn ">Go to Vendor Management</a>
+                            <p class="card-text">View Vender Management information.</p>
+                            <a href="./" class="btn ">Go to Vendor Management </a>
                         </div>
                     </div>
                 </div>
